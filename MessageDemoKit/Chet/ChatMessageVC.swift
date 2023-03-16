@@ -96,7 +96,6 @@ class ChatMessageVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        presentLocationPicker()
     }
     
     func Location(lat : String,long: String) {
@@ -115,59 +114,7 @@ class ChatMessageVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
          }
          
     }
-    private func presentLocationPicker() {
-        
-       
-       /*  print(img,name)
-         Eminame = name
-         AAImage = img//"\(img)"
-         print(AAImage)
-         
-         if Eminame == "Complet" {
-         self.imgEmID.image = AAImage
-         EmCompletView.isHidden = false
-         EmTapHereView.isHidden = true
-         
-         }else{
-         EmCompletView.isHidden = true
-         EmTapHereView.isHidden = false
-         
-         }
-         
-         }
-         */
-        
-        
-        /*
-        //  vc = story.instantiateViewController(withIdentifier: "LocationVC") as! LocationVC
-        let vc = LocationVC(coordinates: nil)
-        vc.title = "Pick Location"
-        vc.modalPresentationStyle = .overCurrentContext
-        vc.modalTransitionStyle = .coverVertical
-       // vc.delegate = self
-        vc.actionLocationclicked = { (result) in
-            print(result)
-            self.dismiss(animated: true, completion: nil)
-            let vc =  LSMapVC.getObject()
-            vc.actionLocationclicked = { (lat,long) in
-                print(lat,long)
-                self.lat = lat
-                self.long = long
-                Constant.lat = lat
-                Constant.lng = long
-                let location = Constant.GOOGLE_STATIC_MAP_BASE_URL
-                if #available(iOS 15.0, *) {
-                    self.loaderView.isHidden = false
-                    self.insertNewMessage(location, image: "map", name: "")
-                } else {
-                    // Fallback on earlier versions
-                }
-            }
-            self.present(vc, animated: true)
-        }
-        self.present(vc, animated: true)
-        */
-    }
+   
     
     @IBAction func btnAudioTapped(_ sender: UIButton) {
         if self.txt_Message.text!.count < 1{
