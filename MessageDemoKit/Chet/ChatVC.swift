@@ -41,7 +41,6 @@ class ChatVC: UIViewController {
     
     var channel: String?
     
-    
     var recId:Int?
     var recName:String?
     var recProfileImage:String?

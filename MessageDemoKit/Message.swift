@@ -27,13 +27,13 @@ struct FireMessage{
     
     
     
-    init(user: String, content: String,chennalID:String) {
-        sender = user
-        self.content = content
-        sentDate = Date().millisecondsSince1970
-        id = nil
-        self.chennalID = chennalID
-    }
+//    init(user: String, content: String,chennalID:String) {
+//        sender = user
+//        self.content = content
+//    //    sentDate = Date().millisecondsSince1970
+//        id = nil
+//        self.chennalID = chennalID
+//    }
     
     
     init?(document: QueryDocumentSnapshot) {
@@ -82,6 +82,9 @@ extension FireMessage: Comparable {
 
 
 
+
+// Firechannel/.......................//////////
+
 struct FireChennal{
     
     let reciverID :String
@@ -103,16 +106,16 @@ struct FireChennal{
             let chennalID = data ["channelId"] as? String,
             let lastmessageTime = data ["lastmessageTime"] as? Int64,
             let senderID = data ["senderID"] as? String
-             
                 
-        else {                  
+                
+        else {
             return nil
         }
         
         var parti : ChatUsers?
         for i in particepentData{
             if let dic  = i as? NSDictionary{
-                if dic["userID"] as! String != Helper.shared().getUserID(){
+                if dic["userID"] as! String !=  "" {// Helper.shared().getUserID(){
                     let userData = ChatUsersData(userName:(dic["userData"] as! NSDictionary)["userName"] as! String, userimage: (dic["userData"] as! NSDictionary)["userimage"] as! String, fcmT:(dic["userData"] as! NSDictionary)["fcm"] as? String ?? "")
                     parti =  ChatUsers(userData: userData, userID:dic["userID"] as! String)
                 }
@@ -178,3 +181,6 @@ struct ChatUsersData {
         self.fcmToken = fcmT
     }
 }
+
+
+

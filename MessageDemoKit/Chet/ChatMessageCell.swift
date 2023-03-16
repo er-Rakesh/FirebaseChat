@@ -13,13 +13,8 @@ enum CellType {
 
 class ChatMessageCell: UITableViewCell {
 
-    @IBOutlet weak var imgUserLeft:UIImageView!
-    @IBOutlet weak var lblTimeLeft:UILabel!
-    @IBOutlet weak var lblMessageLeft:UILabel!
-    //@IBOutlet weak var imgTriangleLeft:UIImageView!
-    
+     
     @IBOutlet weak var viewRight: UIView!
-    @IBOutlet weak var viewLeft: UIView!
     
     @IBOutlet weak var imgUserRight:UIImageView!
     @IBOutlet weak var lblTimeRight:UILabel!
@@ -28,8 +23,7 @@ class ChatMessageCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        viewLeft.layer.cornerRadius = 10
-        viewLeft.layer.maskedCorners = [.layerMaxXMaxYCorner,.layerMinXMinYCorner,.layerMaxXMinYCorner]
+        
         viewRight.layer.cornerRadius = 10
         viewRight.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner,.layerMinXMaxYCorner]
         // Initialization code
@@ -40,6 +34,8 @@ class ChatMessageCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    /*
     private var type: CellType = .right {
         didSet {
             let rightHidden = type == .left ? true : false
@@ -94,11 +90,12 @@ class ChatMessageCell: UITableViewCell {
             }
         }
     }
+    
     func update(type: CellType, message: FireMessage, userImage:String) {
         self.type = type
         self.time = message.sentDate
         self.userImage = userImage
         self.message = message.content
     }
-    
+    */
 }

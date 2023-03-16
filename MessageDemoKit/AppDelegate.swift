@@ -6,15 +6,28 @@
 //
 
 import UIKit
+import FirebaseCore
+import GoogleSignIn
+import Firebase
+import FirebaseAuth
+import FirebaseDatabase
+import IQKeyboardManagerSwift
+import GoogleMaps
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        return true
+        // Initialize Google sign-in
+        
+        FirebaseApp.configure()
+        IQKeyboardManager.shared.enable = true
+         GMSServices.provideAPIKey("AIzaSyA81gjjpQGwZNSDDbiw5i56zMr8ITIz0tc")
+        return false
+        
     }
 
     // MARK: UISceneSession Lifecycle
@@ -33,4 +46,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-

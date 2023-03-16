@@ -2,6 +2,39 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>by acces</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>to here you</string>
+	<key>NSCameraUsageDescription</key>
+	<string>to see you</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<array>
+			<string>googlechromes</string>
+			<string>comgooglemaps</string>
+		</array>
+        <key>NSLocationWhenInUseUsageDescription</key>
+        <string>When in use permissions</string>
+        <key>NSLocationAlwaysUsageDescription</key>
+        <string>always permissions</string>
+        <key>NSLocationAlwaysAndWhenInUsageDescription</key>
+        <string>Always and in usage permissions</string>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.1038338843239-onmebh70iajbj56lqiui7p82987fbsru</string>
+			</array>
+		</dict>
+	</array>
+	<key>FIREBASE_ANALYTICS_COLLECTION_ENABLED</key>
+	<string>NO</string>
+	<key>FIREBASE_ANALYTICS_COLLECTION_DEACTIVATED</key>
+	<string>YES</string>
+	<key>FirebaseScreenReportingEnabled</key>
+	<false/>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

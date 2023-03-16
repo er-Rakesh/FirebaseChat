@@ -9,6 +9,7 @@ import UIKit
 
 class LocationCell: UITableViewCell {
 
+    @IBOutlet weak var mapLocatioImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

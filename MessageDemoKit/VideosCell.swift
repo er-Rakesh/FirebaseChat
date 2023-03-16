@@ -6,9 +6,14 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
 
 class VideosCell: UITableViewCell {
 
+    @IBOutlet weak var Avplayer: PlayerView!
+    @IBOutlet weak var videoTime: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

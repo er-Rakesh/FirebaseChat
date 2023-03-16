@@ -6,24 +6,24 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
 
-class PlayerView: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+class PlayerView: UIView {
+    override static var layerClass: AnyClass {
+        return AVPlayerLayer.self;
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    var playerLayer: AVPlayerLayer {
+        return layer as! AVPlayerLayer;
     }
-    */
-
+    
+    var player: AVPlayer? {
+        get {
+            return playerLayer.player;
+        }
+        set {
+            playerLayer.player = newValue;
+        }
+    }
 }
